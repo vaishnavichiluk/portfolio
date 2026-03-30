@@ -41,7 +41,31 @@ body:hover #cur{opacity:1}
 /* ── SCROLLBAR ── */
 ::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--teal);border-radius:3px}
 /* ── NAV ── */
-nav{position:fixed;top:0;width:100%;z-index:100;padding:18px 64px;display:flex;justify-content:space-between;align-items:center;background:rgba(241,247,247,0.88);backdrop-filter:blur(18px);border-bottom:1px solid var(--border)}
+nav{
+  position: fixed;
+  top: 20px;              /* 🔥 gap from top */
+  left: 50%;
+  transform: translateX(-50%);  /* center */
+
+  width: 85%;             /* not full width */
+  max-width: 1000px;      /* control size */
+
+  z-index: 100;
+  padding: 10px 30px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: rgba(241,247,247,0.85);
+  backdrop-filter: blur(18px);
+
+  border: 1px solid var(--border);
+  border-radius: 40px;   /* 🔥 rounded pill */
+
+  box-shadow: 0 8px 30px rgba(0,0,0,0.05); /* subtle depth */
+}
+
 .nav-name{font-family:var(--display);font-size:15px;font-weight:700;color:var(--slate2);letter-spacing:-.01em}
 .nav-right{display:flex;align-items:center;gap:20px}
 .nav-links{display:flex;gap:28px;list-style:none}
@@ -65,7 +89,7 @@ nav{position:fixed;top:0;width:100%;z-index:100;padding:18px 64px;display:flex;j
 .hero-headline{font-family:var(--display);font-size:clamp(52px,8.5vw,108px);font-weight:800;line-height:.95;letter-spacing:-.04em;color:var(--slate2);opacity:0;animation:fadeUp .6s .4s ease forwards}
 .hero-headline .pink{color:var(--pink);-webkit-text-stroke:0px}
 .hero-headline .teal{color:var(--teal)}
-.hero-sub-line{margin-top:24px;font-size:clamp(16px,2.2vw,21px);font-weight:500;color:var(--slate);line-height:1.5;max-width:640px;opacity:0;animation:fadeUp .6s .55s ease forwards}
+.hero-sub-line{margin-top:24px;font-size:clamp(16px,2.2vw,21px);font-weight:600;color:var(--slate2);line-height:1.5;max-width:640px;opacity:0;animation:fadeUp .6s .55s ease forwards}
 .hero-desc{margin-top:14px;font-size:15px;line-height:1.85;color:var(--muted);max-width:580px;opacity:0;animation:fadeUp .6s .65s ease forwards}
 .hero-desc strong{color:var(--slate)}
 .hero-social{margin-top:32px;display:flex;gap:14px;flex-wrap:wrap;opacity:0;animation:fadeUp .6s .8s ease forwards}
