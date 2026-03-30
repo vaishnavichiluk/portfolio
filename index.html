@@ -153,7 +153,7 @@ section{padding:96px 64px}
 
 /* __ certifications__*/
 #certifications {
-  padding: 40px 20px;
+  padding: 60px 20px;   /* 🔥 little more space */
 }
 
 .sec-eyebrow {
@@ -162,27 +162,88 @@ section{padding:96px 64px}
 }
 
 .sec-title {
-  font-size: 28px;
-  margin-bottom: 20px;
+  font-size: 32px;      /* 🔥 bigger heading */
+  margin-bottom: 30px;
 }
 
+/* container */
 .contact-cards {
   display: flex;
-  gap: 20px;
+  gap: 30px;            /* 🔥 more spacing */
   flex-wrap: wrap;
+  justify-content: center;  /* 🔥 center alignment */
+}
+
+/* card */
+.contact-card {
+  display: flex;
+  align-items: flex-start;   /* 🔥 important for button alignment */
+  gap: 15px;
+  padding: 20px 24px;
+  background: #F1F7F7;       /* 🔥 theme match */
+  border-radius: 14px;
+  text-decoration: none;
+  color: black;
+  width: 340px;              /* 🔥 bigger card */
+  transition: 0.3s;
+  border: 1px solid #D5E5E5;
+}
+
+/* hover */
+.contact-card:hover {
+  transform: translateY(-5px);
+  background: #D5E5E5;
+}
+
+/* icon */
+.c-ico {
+  font-size: 28px;
+}
+
+/* title */
+.c-sub {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+/* issuer */
+.c-val {
+  font-size: 13px;
+  color: #7a8f8f;
+}
+
+/* 🔥 BUTTON */
+.cert-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  padding: 6px 14px;
+  background: #2f3d3d;
+  color: #fff;
+  font-family: monospace;
+  font-size: 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.cert-btn:hover {
+  background: #3d4f4f;
+  transform: translateY(-1px);
 }
 
 /* Card */
 .contact-card {
   display: flex;
   align-items: center;
-  gap: 15px;
-  padding: 15px 20px;
+  gap: 30px;
+  padding: 20px 24px;
   background: #f9fafb;
   border-radius: 12px;
   text-decoration: none;
   color: black;
-  width: 280px;
+  width: 340px;
   transition: 0.3s;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
@@ -199,10 +260,11 @@ section{padding:96px 64px}
 
 .c-sub {
   font-weight: 600;
+   font-size: 15px;
 }
 
 .c-val {
-  font-size: 14px;
+  font-size: 15px;
   color: #6b7280;
 }
 /* ── PROJECTS ── */
@@ -419,34 +481,37 @@ section:nth-of-type(even) {
   <div class="contact-cards">
 
     <!-- Azure -->
-    <a href="AZURE AI FUNDAMENTALS-1 (1).pdf" target="_blank">
+    
       <div class="contact-card">
         <div class="c-ico">☁️</div>
         <div>
           <div class="c-sub">Microsoft Azure AI-900</div>
-          <div class="c-val">Microsoft • 2025</div>
+         <a href="AZURE AI FUNDAMENTALS-1 (1).pdf" target="_blank" class="cert-btn">
+            View Certificate ↗
         </div>
       </div>
     </a>
 
     <!-- Oracle -->
-    <a href="oracle gen ai certificate.pdf" target="_blank">
+    
       <div class="contact-card">
         <div class="c-ico">🤖</div>
         <div>
           <div class="c-sub">Oracle Generative AI</div>
-          <div class="c-val">Oracle • 2025</div>
+          <a href="oracle gen ai certificate.pdf" target="_blank" class="cert-btn">
+          View Certificate ↗
         </div>
       </div>
     </a>
 
     <!-- Power BI -->
-    <a href="coursera certificate.pdf" target="_blank">
+    
       <div class="contact-card">
         <div class="c-ico">📊</div>
         <div>
           <div class="c-sub">Data science professional</div>
-          <div class="c-val">Coursera • 2025</div>
+          <<a href="coursera certificate.pdf" target="_blank" class="cert-btn">
+          View Certificate ↗
         </div>
       </div>
     </a>
