@@ -25,7 +25,7 @@
   --white:#ffffff;
   --text:#2f3d3d;
   --muted:#7a8f8f;
-  -- accent:#7ecfcc; 
+  --accent:#7ecfcc; 
   --border:#e4eeee;;
   --mono:'Fira Code',monospace;
   --sans:'Inter',sans-serif;
@@ -34,7 +34,7 @@
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:var(--sans);background:var(--bg);color:var(--text);overflow-x:hidden;cursor:none}
+body{font-family:var(--sans);background:#F1F7F7;color:var(--text);overflow-x:hidden;cursor:none}
 /* ── CUSTOM CURSOR ── */
 #cur{position:fixed;width:18px;height:18px;border-radius:50%;background:var(--pink);pointer-events:none;z-index:9999;transition:transform .15s ease;mix-blend-mode:multiply}
 #cur-ring{position:fixed;width:38px;height:38px;border-radius:50%;border:1.5px solid var(--teal);pointer-events:none;z-index:9998;transition:all .1s ease}
@@ -115,7 +115,6 @@ section{padding:96px 64px}
 .sec-title .hl{color:var(--teal)}
 /* ── ABOUT ── */
 #about{
-  background:var(--white);
   padding-top:120px;
 }
 .about-grid{display:grid;grid-template-columns:280px 1fr;gap:80px;align-items:start}
@@ -132,7 +131,7 @@ section{padding:96px 64px}
 .about-quote{padding:18px 22px;background:var(--bg);border-left:3px solid var(--teal);border-radius:0 10px 10px 0;margin-top:6px}
 .about-quote p{margin:0;font-size:14.5px;color:var(--slate);line-height:1.8;font-style:italic}
 /* ── SKILLS ── */
-#skills{background:var(--bg)}
+#skills{}
 .skills-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .skill-block{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:24px;transition:all .25s}
 .skill-block:hover{transform:translateY(-4px);box-shadow:0 14px 36px rgba(126,207,204,.15);border-color:rgba(126,207,204,.4)}
@@ -154,16 +153,60 @@ section{padding:96px 64px}
 
 /* __ certifications__*/
 #certifications {
-  background: var(--white); /* match projects */
+  padding: 40px 20px;
 }
+
+.sec-eyebrow {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.sec-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.contact-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Card */
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 20px;
+  background: #f9fafb;
+  border-radius: 12px;
+  text-decoration: none;
+  color: black;
+  width: 280px;
+  transition: 0.3s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
 .contact-card:hover {
-  transform: translateX(6px);
+  transform: translateY(-5px);
+  background: #D5E5E5;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
+
 .c-ico {
-  font-size: 18px;
+  font-size: 28px;
+}
+
+.c-sub {
+  font-weight: 600;
+}
+
+.c-val {
+  font-size: 14px;
+  color: #6b7280;
 }
 /* ── PROJECTS ── */
-#projects{background:var(--white)}
+#projects{}
 .projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
 .proj-card{background:var(--bg);border:1px solid var(--border);border-radius:18px;padding:28px;transition:all .3s;position:relative;overflow:hidden;display:flex;flex-direction:column}
 .proj-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--pink),var(--teal));transform:scaleX(0);transform-origin:left;transition:transform .35s}
@@ -187,11 +230,11 @@ section{padding:96px 64px}
 .proj-gh:hover{background:var(--slate);transform:translateY(-1px)}
 .proj-gh svg{width:13px;height:13px;fill:#fff}
 /* ── CONTACT ── */
-#contact{background:var(--bg)}
+#contact{}
 .contact-inner{max-width:640px}
 .contact-desc{font-size:16px;color:var(--slate);;line-height:1.85;margin-bottom:32px}
 .contact-cards{display:flex;flex-direction:column;gap:12px;margin-bottom:28px}
-.contact-card{display:flex;align-items:center;gap:16px;padding:16px 20px;background:var(--white);border:1px solid var(--border);border-radius:12px;text-decoration:none;color:var(--text);transition:all .22s}
+.contact-card{display:flex;align-items:center;gap:16px;padding:16px 20px;background:var(--white);border:1px solid #D5E5E5;border-radius:12px;text-decoration:none;color:#ffffff;transition:all .22s}
 .contact-card:hover{border-color:var(--teal);transform:translateX(5px);box-shadow:0 6px 20px rgba(126,207,204,.15)}
 .c-ico{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
 .ico-c1{background:var(--pink)} .ico-c2{background:var(--mint)} .ico-c3{background:rgba(208,179,178,.3)}
@@ -209,6 +252,13 @@ footer{padding:26px 64px;border-top:1px solid var(--border);display:flex;justify
 /* ── RESPONSIVE ── */
 @media(max-width:960px){nav{padding:16px 24px}.nav-links{display:none}#hero,section{padding:80px 24px}.about-grid{grid-template-columns:1fr;gap:36px}.skills-cols{grid-template-columns:repeat(2,1fr)}.projects-grid{grid-template-columns:1fr}footer{padding:20px 24px;flex-direction:column;gap:8px;text-align:center}}
 @media(max-width:560px){.skills-cols{grid-template-columns:1fr}.hero-social{flex-direction:column}}
+section:nth-of-type(odd) {
+  background-color: #F1F7F7;
+}
+
+section:nth-of-type(even) {
+  background-color: #D5E5E5;
+}
 </style>
 </head>
 <body>
@@ -361,36 +411,45 @@ footer{padding:26px 64px;border-top:1px solid var(--border);display:flex;justify
   </div>
 </section>
 
-<!--Certifications-->
+<!-- Certifications Section -->
 <section id="certifications">
   <div class="sec-eyebrow">Certifications</div>
   <h2 class="sec-title">Certifications</h2>
 
   <div class="contact-cards">
 
-    <div class="contact-card">
-      <div class="c-ico">☁️</div>
-      <div>
-        <div class="c-sub">Microsoft Azure AI-900</div>
-        <div class="c-val">AI Fundamentals</div>
+    <!-- Azure -->
+    <a href="AZURE AI FUNDAMENTALS-1 (1).pdf" target="_blank">
+      <div class="contact-card">
+        <div class="c-ico">☁️</div>
+        <div>
+          <div class="c-sub">Microsoft Azure AI-900</div>
+          <div class="c-val">Microsoft • 2025</div>
+        </div>
       </div>
-    </div>
+    </a>
 
-    <div class="contact-card">
-      <div class="c-ico">🤖</div>
-      <div>
-        <div class="c-sub">Oracle Generative AI</div>
-        <div class="c-val">Oracle</div>
+    <!-- Oracle -->
+    <a href="oracle gen ai certificate.pdf" target="_blank">
+      <div class="contact-card">
+        <div class="c-ico">🤖</div>
+        <div>
+          <div class="c-sub">Oracle Generative AI</div>
+          <div class="c-val">Oracle • 2025</div>
+        </div>
       </div>
-    </div>
+    </a>
 
-    <div class="contact-card">
-      <div class="c-ico">📊</div>
-      <div>
-        <div class="c-sub">Power BI</div>
-        <div class="c-val">Coursera</div>
+    <!-- Power BI -->
+    <a href="coursera certificate.pdf" target="_blank">
+      <div class="contact-card">
+        <div class="c-ico">📊</div>
+        <div>
+          <div class="c-sub">Data science professional</div>
+          <div class="c-val">Coursera • 2025</div>
+        </div>
       </div>
-    </div>
+    </a>
 
   </div>
 </section>
