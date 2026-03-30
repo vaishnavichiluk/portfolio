@@ -150,6 +150,17 @@ section{padding:96px 64px}
 .lvl-adv{background:rgba(126,207,204,.18);color:#3d8f8a;border:1px solid rgba(126,207,204,.35)}
 .lvl-int{background:rgba(247,203,202,.35);color:#9b5a57;border:1px solid rgba(247,203,202,.6)}
 .lvl-beg{background:rgba(208,179,178,.25);color:#7a5a57;border:1px solid rgba(208,179,178,.5)}
+
+/* __ certifications__*/
+#certifications {
+  background: var(--white); /* match projects */
+}
+.contact-card:hover {
+  transform: translateX(6px);
+}
+.c-ico {
+  font-size: 18px;
+}
 /* ── PROJECTS ── */
 #projects{background:var(--white)}
 .projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
@@ -205,10 +216,11 @@ footer{padding:26px 64px;border-top:1px solid var(--border);display:flex;justify
 
 <!-- NAV -->
 <nav>
-  <div class="nav-name">Vaishnavi Chilukuri</div>
+  <!--<div class="nav-name">Vaishnavi Chilukuri</div>-->
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
+     <li><a href="#certifications">Certifications</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#research">Research Contributions</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -323,10 +335,64 @@ footer{padding:26px 64px;border-top:1px solid var(--border);display:flex;justify
         <div class="skill-row"><span class="skill-name">Git &amp; GitHub</span><span class="skill-lvl lvl-int">INTERMEDIATE</span></div>
         <div class="skill-row"><span class="skill-name">SDLC</span><span class="skill-lvl lvl-int">INTERMEDIATE</span></div>
       </div>
+   <div class="skill-block">
+  <div class="skill-hdr">
+    <div class="skill-ico ico-mint">☁️</div>
+    <div>
+      <div class="skill-title">Cloud</div>
+      <div class="skill-sub">&gt;_ basics:</div>
+    </div>
+  </div>
+
+  <div class="skill-rows">
+    <div class="skill-row">
+      <span class="skill-name">AWS (EC2, S3)</span>
+      <span class="skill-lvl lvl-int">BASIC</span>
+    </div>
+
+    <div class="skill-row">
+      <span class="skill-name">Microsoft Azure</span>
+      <span class="skill-lvl lvl-int">BASIC</span>
+    </div>
+  </div>
+</div>
     </div>
   </div>
 </section>
 
+<!--Certifications-->
+<section id="certifications">
+  <div class="sec-eyebrow">Certifications</div>
+  <h2 class="sec-title">Certifications</h2>
+
+  <div class="contact-cards">
+
+    <div class="contact-card">
+      <div class="c-ico">☁️</div>
+      <div>
+        <div class="c-sub">Microsoft Azure AI-900</div>
+        <div class="c-val">AI Fundamentals</div>
+      </div>
+    </div>
+
+    <div class="contact-card">
+      <div class="c-ico">🤖</div>
+      <div>
+        <div class="c-sub">Oracle Generative AI</div>
+        <div class="c-val">Oracle</div>
+      </div>
+    </div>
+
+    <div class="contact-card">
+      <div class="c-ico">📊</div>
+      <div>
+        <div class="c-sub">Power BI</div>
+        <div class="c-val">Coursera</div>
+      </div>
+    </div>
+
+  </div>
+</section>
 <!-- PROJECTS -->
 <section id="projects">
   <div class="sec-eyebrow">Projects</div>
