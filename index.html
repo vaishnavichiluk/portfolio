@@ -86,7 +86,10 @@ section{padding:96px 64px}
 .sec-title{font-family:var(--display);font-size:clamp(28px,4vw,48px);font-weight:800;letter-spacing:-.025em;margin-bottom:56px;line-height:1.1;color:var(--slate2)}
 .sec-title .hl{color:var(--teal)}
 /* ── ABOUT ── */
-#about{background:var(--white)}
+#about{
+  background:var(--white);
+  padding-top:120px;
+}
 .about-grid{display:grid;grid-template-columns:280px 1fr;gap:80px;align-items:start}
 .about-left{display:flex;flex-direction:column;align-items:center;gap:18px}
 .about-img{width:220px;height:220px;border-radius:50%;background:linear-gradient(135deg,var(--pink),var(--mint));border:4px solid var(--taupe);display:flex;align-items:center;justify-content:center;font-size:72px;overflow:hidden;box-shadow:0 8px 32px rgba(247,203,202,.5)}
@@ -354,78 +357,57 @@ footer{padding:26px 64px;border-top:1px solid var(--border);display:flex;justify
 
 
 <section id="research">
-  <div class="sec-eyebrow">Research</div>
-  <h2 class="sec-title">Research <span class="hl">Contributions</span></h2>
+  <div class="proj-card">
 
-  <div class="contact-inner reveal">
+  <div class="proj-num">RESEARCH_01</div>
 
-    <p class="contact-desc">
-      Exploring intelligent systems through deep learning and reinforcement learning, focusing on solving real-world healthcare problems using data-driven approaches.
-    </p>
+  <div class="proj-title">
+    Skin Lesion Segmentation using Dilated SegNet
+  </div>
 
-    <div class="contact-cards">
+  <div class="proj-bullets">
 
-      <!-- Research Work -->
-      <div class="contact-card">
-        <div class="c-ico">🧠</div>
-        <div>
-          <div class="c-sub">Research Work</div>
-          <div class="c-val">
-            Skin Lesion Segmentation using Dilated SegNet
-          </div>
-        </div>
-      </div>
-
-      <!-- NEW: Approach -->
-      <div class="contact-card">
-        <div class="c-ico">⚙️</div>
-        <div>
-          <div class="c-sub">Approach</div>
-          <div class="c-val">
-            Developed a Dilated SegNet model to capture both local and global features for accurate lesion segmentation
-          </div>
-        </div>
-      </div>
-
-      <!-- Presented At -->
-      <div class="contact-card">
-        <div class="c-ico">📍</div>
-        <div>
-          <div class="c-sub">Presented At</div>
-          <div class="c-val">NIT Jamshedpur</div>
-        </div>
-      </div>
-
-      <!-- Performance -->
-      <div class="contact-card">
-        <div class="c-ico">📊</div>
-        <div>
-          <div class="c-sub">Performance</div>
-          <div class="c-val">
-            <strong>99.4% Accuracy</strong> · Dice 0.937 · IoU 0.877
-          </div>
-        </div>
-      </div>
-
-      <!-- NEW: Contribution -->
-      <div class="contact-card">
-        <div class="c-ico">📌</div>
-        <div>
-          <div class="c-sub">Contribution</div>
-          <div class="c-val">
-            Improved boundary detection for irregular and low-contrast lesions using dilated convolutions
-          </div>
-        </div>
-      </div>
-
+    <div class="proj-bullet">
+      <span class="bkey bk-prob">Problem</span>
+      <span class="bval">
+        Traditional methods struggle with irregular shapes and low-contrast lesion boundaries
+      </span>
     </div>
 
-    <div class="open-badge">
-      <span class="open-dot"></span>
-      Research-driven • Focused on real-world AI applications
+    <div class="proj-bullet">
+      <span class="bkey bk-built">Approach</span>
+      <span class="bval">
+        Used Dilated SegNet to better capture fine lesion boundaries in dermoscopic images
+      </span>
+    </div>
+
+    <div class="proj-bullet">
+      <span class="bkey bk-res">Result</span>
+      <span class="bval">
+        Achieved <strong>99.4% accuracy</strong>, Dice 0.937, IoU 0.877
+      </span>
+    </div>
+
+    <div class="proj-bullet">
+      <span class="bkey bk-imp">Impact</span>
+      <span class="bval">
+        Supports early melanoma detection through accurate segmentation
+      </span>
     </div>
 
   </div>
+
+  <div class="proj-tags">
+    <span class="proj-tag">Deep Learning</span>
+    <span class="proj-tag">SegNet</span>
+    <span class="proj-tag">Medical AI</span>
+  </div>
+
+  <div class="proj-foot">
+    <span class="proj-tag">📍 NIT Jamshedpur</span>
+  </div>
+
+</div>
 </section>
 <!-- CONTACT -->
 <section id="contact">
